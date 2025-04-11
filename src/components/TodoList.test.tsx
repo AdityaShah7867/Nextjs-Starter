@@ -25,7 +25,7 @@ const mockStore = {
 describe('TodoList', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    (useTodoStore as jest.Mock).mockReturnValue(mockStore);
+    (useTodoStore as unknown as jest.Mock).mockReturnValue(mockStore);
   });
 
   test('renders todo list correctly', () => {
@@ -35,7 +35,7 @@ describe('TodoList', () => {
       </Providers>
     );
     
-    expect(screen.getByText('Todo App')).toBeInTheDocument();
+    expect(screen.getByText('Todo List')).toBeInTheDocument();
     expect(screen.getByText('Test todo 1')).toBeInTheDocument();
     expect(screen.getByText('Test todo 2')).toBeInTheDocument();
     expect(screen.getByText('1 items left')).toBeInTheDocument();

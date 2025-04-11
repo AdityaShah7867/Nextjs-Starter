@@ -1,4 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo App
+
+A single page Todo application built with Next.js, TanStack Query, and Zustand for state management.
+
+## Features
+
+- Add, toggle, and delete todos
+- Filter todos by status (All, Active, Completed)
+- Clear completed todos
+- Persistent storage with localStorage
+- Dark mode support
+- Statistics page with todo metrics
+
+## Technology Stack
+
+- Next.js 15.3.0
+- React 19
+- TanStack Query for data fetching
+- Zustand for state management
+- Jest and React Testing Library for testing
+- Tailwind CSS for styling
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Run tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:ci
+```
+
+## Automated Quality Checks
+
+This project uses Husky to run automated quality checks:
+
+- **Pre-push hook**: Runs all tests before allowing code to be pushed to the repository.
+  If tests fail, the push will be aborted.
+  
+- **Pre-commit hook**: Runs linting before allowing code to be committed.
+  If linting fails, the commit will be aborted.
+
+## Code Structure
+
+- `src/components` - React components
+- `src/store` - Zustand store for state management
+- `src/types` - TypeScript type definitions
+- `src/hooks` - Custom React hooks
+- `src/lib` - Utility functions and providers
 
 ## Getting Started
 
